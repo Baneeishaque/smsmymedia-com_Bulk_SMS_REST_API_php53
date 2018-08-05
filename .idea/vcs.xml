@@ -2,5 +2,16 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/danielstjules/stringy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/doctrine/collections" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/filp/whoops" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/nette/component-model" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/nette/forms" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/nette/http" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/nette/utils" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/symfony/event-dispatcher" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/symfony/var-dumper" vcs="Git" />
   </component>
 </project>
