@@ -6,13 +6,13 @@
  * Time: 18:09
  */
 
-use Guzzle\Http\Client;
+use Ndk_common\Sms_my_media_Bulk_SMS_Rest_Client;
 use Nette\Forms\Form;
-use Nette\Utils\Json;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
 
 require_once 'vendor/autoload.php';
+require_once 'Sms_my_media_Bulk_SMS_Rest_Client.php';
 
 $whoops = new Run;
 $whoops->pushHandler(new PrettyPageHandler);
@@ -128,12 +128,12 @@ if ($form->isSuccess()) {
 //    var_dump($api_response);
 
     // Create a client and provide a base URL
-    $client = new Client('http://smsmymedia.com/rest/services/sendSMS');
-    $request = $client->get('sendGroupSms?AUTH_KEY=' . $values['AUTH_KEY'] . '&message=' . $values['message'] . '&senderId=' . $values['senderId'] . '&routeId=' . $values['routeId'] . '&mobileNos=' . $values['mobileNos'] . '&smsContentType=' . $values['smsContentType']);
-// Send the request and get the response
-    $api_response = $request->send();
-//    var_dump($response);
-    dump($api_response);
+//    $client = new Client('http://smsmymedia.com/rest/services/sendSMS');
+//    $request = $client->get('sendGroupSms?AUTH_KEY=' . $values['AUTH_KEY'] . '&message=' . $values['message'] . '&senderId=' . $values['senderId'] . '&routeId=' . $values['routeId'] . '&mobileNos=' . $values['mobileNos'] . '&smsContentType=' . $values['smsContentType']);
+//// Send the request and get the response
+//    $api_response = $request->send();
+////    var_dump($response);
+//    dump($api_response);
 //    echo $api_response->getBody();
 
 //    $expression = 'foo.*.baz';
@@ -191,22 +191,30 @@ if ($form->isSuccess()) {
 //        echo 'Exception : ' . $e;
 //    }
 
-    try {
-        $api_response_array = Json::decode($api_response->getBody(), Json::FORCE_ARRAY);
-//        var_dump($api_response_array);
-        dump($api_response_array);
-    } catch (\Nette\Utils\JsonException $e) {
-        echo 'Exception : ' . $e;
-    }
-    if ($api_response_array['responseCode'] == '3001') {
-        echo 'SMS Send Successfully.';
-    } else {
-        echo 'SMS Send Failure, Response : ' . $api_response_array['response'];
-    }
+//    try {
+//        $api_response_array = Json::decode($api_response->getBody(), Json::FORCE_ARRAY);
+////        var_dump($api_response_array);
+//        dump($api_response_array);
+//    } catch (\Nette\Utils\JsonException $e) {
+//        echo 'Exception : ' . $e;
+//    }
+//    if ($api_response_array['responseCode'] == '3001') {
+//        echo 'SMS Send Successfully.';
+//    } else {
+//        echo 'SMS Send Failure, Response : ' . $api_response_array['response'];
+//    }
 
-//    $sms = new Sms(sms_my_media::$config);
-//    $sms_my_media_com_gateway=new sms_my_media_com_Gateway();
-//    $sms = new Sms($sms_my_media_com_gateway->get_configuration(__DIR__ . '/logs/sms.log',$values['AUTH_KEY'],$values['senderId'],$values['routeId'],$values['smsContentType']));
+    $sms_my_media_bulk_sms_rest_client = new Sms_my_media_Bulk_SMS_Rest_Client($values['AUTH_KEY'], $values['senderId']);
+    $sms_my_media_bulk_sms_rest_client->send_sms($values['message'], $values['mobileNos']);
 
-
+    /* foreach example 3: key and value */
+//    $a = array(
+//        "one" => 1,
+//        "two" => 2,
+//        "three" => 3,
+//        "seventeen" => 17
+//    );
+//    foreach ($a as $k => $v) {
+//        echo "$k = $v";
+//    }
 }
