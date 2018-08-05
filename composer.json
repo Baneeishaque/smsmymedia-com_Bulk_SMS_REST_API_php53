@@ -1,0 +1,12 @@
+{
+  "name": "ndk/smsmymedia_com_Bulk_SMS_REST_API_php53",
+  "description": "smsmymedia.com Bulk SMS REST API for php 5.3",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Banee Ishaque K",
+      "email": "baneeishaque@gmail.com"
+    }
+  ]
+}
