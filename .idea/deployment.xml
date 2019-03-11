@@ -1,35 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="vfmob_sftp" deleteMissingItems="true" createEmptyFolders="true" showEqualInSync="true">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="DO" deleteMissingItems="true" createEmptyFolders="true" showEqualInSync="true">
     <serverData>
-      <paths name="Local IIS">
+      <paths name="Built-in web server">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/php/53/smsmymedia-com_Bulk_SMS_REST_API" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="vfmob_ftp">
+      <paths name="DO">
         <serverdata>
           <mappings>
-            <mapping deploy="/smsmymedia_com_bulk_sms_rest_api_demo_php53" local="$PROJECT_DIR$" web="/smsmymedia_com_bulk_sms_rest_api_demo_php53" />
+            <mapping deploy="/53_smsmymedia-com_Bulk_SMS_REST_API" local="$PROJECT_DIR$" web="/53_smsmymedia-com_Bulk_SMS_REST_API" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/.idea" />
-            <excludedPath local="true" path="$PROJECT_DIR$/vendor" />
             <excludedPath local="true" path="$PROJECT_DIR$/.gitignore" />
-          </excludedPaths>
-        </serverdata>
-      </paths>
-      <paths name="vfmob_sftp">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/smsmymedia_com_bulk_sms_rest_api_demo_php53" local="$PROJECT_DIR$" web="/smsmymedia_com_bulk_sms_rest_api_demo_php53" />
-          </mappings>
-          <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/.idea" />
             <excludedPath local="true" path="$PROJECT_DIR$/vendor" />
-            <excludedPath local="true" path="$PROJECT_DIR$/.gitignore" />
+            <excludedPath path="/53_smsmymedia-com_Bulk_SMS_REST_API/vendor" />
+            <excludedPath local="true" path="$PROJECT_DIR$/composer_install.bat" />
+            <excludedPath local="true" path="$PROJECT_DIR$/composer_install.sh" />
           </excludedPaths>
         </serverdata>
       </paths>
